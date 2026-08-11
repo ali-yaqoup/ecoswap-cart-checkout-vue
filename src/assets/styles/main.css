@@ -1,0 +1,93 @@
+/* Global Custom Styles matching Figma Design */
+:root {
+  --ecoswap-green: #1b7a3e;
+  --ecoswap-green-dark: #156532;
+  --ecoswap-green-light: #28a745;
+  --ecoswap-bg: #f8f9fa;
+  --ecoswap-border: #e5e7eb;
+}
+
+body {
+  font-family: 'Inter', Roboto, sans-serif;
+  background-color: var(--ecoswap-bg);
+  color: #1f2937;
+  margin: 0;
+  padding: 0;
+}
+
+.ecoswap-bg {
+  background-color: var(--ecoswap-bg) !important;
+}
+
+/* Custom rounded pill buttons */
+.ecoswap-btn-primary {
+  background-color: var(--ecoswap-green) !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  letter-spacing: normal !important;
+  box-shadow: none !important;
+}
+
+.ecoswap-btn-primary:hover {
+  background-color: var(--ecoswap-green-dark) !important;
+}
+
+.ecoswap-btn-secondary {
+  background-color: #ffffff !important;
+  color: var(--ecoswap-green) !important;
+  border: 1px solid var(--ecoswap-border) !important;
+  border-radius: 9999px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  letter-spacing: normal !important;
+  box-shadow: none !important;
+}
+
+.ecoswap-btn-secondary:hover {
+  background-color: #f9fafb !important;
+}
+
+/* Search bar styling */
+.ecoswap-search-bar .v-field {
+  border-radius: 9999px !important;
+  background-color: #ededed !important;
+  box-shadow: none !important;
+}
+.ecoswap-search-bar .v-field__outline {
+  display: none !important;
+}
+
+/* Card styling */
+.ecoswap-card {
+  border: 1px solid var(--ecoswap-border) !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* Quantity control box */
+.ecoswap-qty-box {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 2px 4px;
+}
+
+.ecoswap-qty-btn {
+  min-width: 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  color: #374151 !important;
+}
+
+.ecoswap-qty-val {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
