@@ -69,15 +69,22 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useCartStore } from '@/stores/cart'
 import { useCheckoutStore } from '@/stores/checkout'
+import { postToShell } from '@/services/shellBridge'
 
 const router = useRouter()
 const cartStore = useCartStore()
 const checkoutStore = useCheckoutStore()
 
+onMounted(() => {
+  postToShell('cart:order-placed', { orderNumber: checkoutStore.orderNumber })
+})
+
 const handleContinueShopping = () => {
+  postToShell('cart:continue-shopping', {})
   // Clear cart after successful order placement
   cartStore.clearCart()
   router.push('/cart')

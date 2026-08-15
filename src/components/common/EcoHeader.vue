@@ -37,7 +37,7 @@
         </div>
 
         <!-- User Profile Icon -->
-        <div class="pa-2 cursor-pointer">
+        <div class="pa-2 cursor-pointer" @click="postToShell('cart:go-to-account', {})">
           <v-icon color="#4b5563" size="24">mdi-account-outline</v-icon>
         </div>
       </div>
@@ -49,6 +49,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useCartStore } from '@/stores/cart'
+import { postToShell } from '@/services/shellBridge'
 
 const router = useRouter()
 const cartStore = useCartStore()

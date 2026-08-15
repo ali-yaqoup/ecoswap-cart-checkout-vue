@@ -54,6 +54,21 @@ export const useCartStore = defineStore('cart', {
     },
   },
   actions: {
+    addItem(newItem) {
+      const existing = this.items.find((i) => i.id === newItem.id)
+      if (existing) {
+        existing.quantity += newItem.quantity || 1
+      } else {
+        this.items.push({
+          id: newItem.id,
+          title: newItem.title,
+          description: newItem.description || '',
+          price: newItem.price,
+          quantity: newItem.quantity || 1,
+          image: newItem.image,
+        })
+      }
+    },
     incrementQuantity(id) {
       const item = this.items.find((i) => i.id === id)
       if (item) {
