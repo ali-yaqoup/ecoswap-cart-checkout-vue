@@ -60,6 +60,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { useCartStore } from '@/stores/cart'
+import { postToShell } from '@/services/shellBridge'
 
 const router = useRouter()
 const cartStore = useCartStore()
@@ -69,8 +70,7 @@ const goToShipping = () => {
 }
 
 const continueShopping = () => {
-  // Stay on cart or navigate to product listing if integrated
-  router.push('/cart')
+  postToShell('cart:continue-shopping', {})
 }
 </script>
 
