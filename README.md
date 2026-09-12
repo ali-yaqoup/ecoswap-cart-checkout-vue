@@ -1,4 +1,4 @@
-# EcoSwap — Shopping Cart & Checkout Microfrontend (Group 11)
+﻿# EcoSwap â€” Shopping Cart & Checkout Microfrontend (Group 11)
 
 [![Vue 3](https://img.shields.io/badge/Vue-3.5.41-4fc08d?logo=vuedotjs)](https://vuejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.4.21-646cff?logo=vite)](https://vitejs.dev/)
@@ -6,7 +6,7 @@
 [![Pinia](https://img.shields.io/badge/Pinia-2.3.1-ffd859)](https://pinia.vuejs.org/)
 [![Netlify Status](https://img.shields.io/badge/Netlify-Deployed-00ad9f?logo=netlify)](https://ecoswap-cart-checkout-vue.netlify.app/)
 
-## 📌 Project Overview
+## ðŸ“Œ Project Overview
 
 **EcoSwap** is a sustainable second-hand marketplace application. This repository contains the **Cart & Checkout Microfrontend** module (developed by **Group 11**), responsible for managing user shopping cart items, address entry, mocked payment processing, and order confirmation.
 
@@ -15,7 +15,7 @@
 
 ---
 
-## 🛠️ Technology Stack & Installed Versions
+## ðŸ› ï¸ Technology Stack & Installed Versions
 
 *(Verified directly from `node_modules` via `npm list` and `package-lock.json`)*
 
@@ -32,34 +32,34 @@
 
 ---
 
-## ✨ Implemented Features
+## âœ¨ Implemented Features
 
-### 🛒 1. Shopping Cart (`/cart`)
+### ðŸ›’ 1. Shopping Cart (`/cart`)
 * **Item Management**: View item details (title, description, image, unit price).
 * **Quantity Adjustment**: Dynamically increase or decrease item quantities (+/-) with automatic price recalculations.
 * **Item Removal**: Delete items from cart with real-time subtotal and tax updates.
 * **Empty Cart State**: Clear feedback screen when the cart is empty, featuring a demo reset button to restore initial sample items.
 * **Order Summary Card**: Displays item count, subtotal, tax calculation (8.5%), shipping estimate, and grand total.
 
-### 📍 2. Shipping Address (`/checkout/shipping`)
+### ðŸ“ 2. Shipping Address (`/checkout/shipping`)
 * **Form Inputs**: Full Name, Phone Number, Street Address, City, Postal Code.
 * **Form Validation**: Vuetify inline validation enforcing required fields prior to proceeding.
 * **State Persistence**: Customer details are persisted in the Pinia checkout store across navigation.
 
-### 💳 3. Payment Processing (`/checkout/payment`)
+### ðŸ’³ 3. Payment Processing (`/checkout/payment`)
 * **Payment Methods**: Toggle between **Credit Card** and **Cash on Delivery (COD)**.
 * **Credit Card Form**: Full card details entry (Card Number, Name on Card, Expiry Date, CVV).
 * **Order Summary Sidebar**: Dynamic order breakdown including a fixed $5.00 shipping fee.
 * **Mocked Transaction**: Submitting the form simulates order placement without calling real payment gateways.
 
-### 🎉 4. Order Confirmation (`/checkout/confirmation`)
+### ðŸŽ‰ 4. Order Confirmation (`/checkout/confirmation`)
 * **Success Indicator**: Visual confirmation with order completion message.
 * **Order Tracking Details**: Generated order ID (`#ECO-12345`), estimated delivery date, and confirmation email alert.
 * **Cart Reset**: Returning to shop automatically clears the processed cart items.
 
 ---
 
-## 🗺️ Verified Application Routes
+## ðŸ—ºï¸ Verified Application Routes
 
 *(Verified directly against `src/router/index.js`)*
 
@@ -74,49 +74,49 @@
 
 ---
 
-## 📂 Project & Component Architecture
+## ðŸ“‚ Project & Component Architecture
 
 ```text
 ecoswap-cart-checkout/
-├── index.html
-├── package.json
-├── package-lock.json
-├── vite.config.js
-├── public/
-│   └── _redirects               # Netlify SPA client-side routing fallback rule
-└── src/
-    ├── main.js                   # Application entry point
-    ├── App.vue                   # Root Vue component with Vuetify wrapper
-    ├── assets/
-    │   ├── images/               # Local sample product thumbnails
-    │   └── styles/
-    │       └── main.css          # Custom global CSS tokens & variables
-    ├── components/
-    │   ├── cart/
-    │   │   ├── CartItemCard.vue        # Single cart item row with quantity & delete
-    │   │   └── OrderSummaryCard.vue    # Order pricing summary box & action buttons
-    │   └── common/
-    │       ├── CheckoutFooter.vue      # Clean checkout footer
-    │       ├── CheckoutHeader.vue      # Minimal header with back link & SSL badge
-    │       ├── EcoFooter.vue           # Main application footer
-    │       └── EcoHeader.vue           # Main application header with cart badge & search
-    ├── plugins/
-    │   └── vuetify.js            # Vuetify instance configuration & custom theme
-    ├── router/
-    │   └── index.js              # Vue Router history setup & route definitions
-    ├── stores/
-    │   ├── cart.js               # Pinia store for cart items, quantities & totals
-    │   └── checkout.js           # Pinia store for shipping address & payment info
-    └── views/
-        ├── OrderConfirmationView.vue # Order success page
-        ├── PaymentView.vue          # Payment page
-        ├── ShippingAddressView.vue  # Shipping address form page
-        └── ShoppingCartView.vue     # Main cart page
+â”œâ”€â”€ index.html
+â”œâ”€â”€ package.json
+â”œâ”€â”€ package-lock.json
+â”œâ”€â”€ vite.config.js
+â”œâ”€â”€ public/
+â”‚   â””â”€â”€ _redirects               # Netlify SPA client-side routing fallback rule
+â””â”€â”€ src/
+    â”œâ”€â”€ main.js                   # Application entry point
+    â”œâ”€â”€ App.vue                   # Root Vue component with Vuetify wrapper
+    â”œâ”€â”€ assets/
+    â”‚   â”œâ”€â”€ images/               # Local sample product thumbnails
+    â”‚   â””â”€â”€ styles/
+    â”‚       â””â”€â”€ main.css          # Custom global CSS tokens & variables
+    â”œâ”€â”€ components/
+    â”‚   â”œâ”€â”€ cart/
+    â”‚   â”‚   â”œâ”€â”€ CartItemCard.vue        # Single cart item row with quantity & delete
+    â”‚   â”‚   â””â”€â”€ OrderSummaryCard.vue    # Order pricing summary box & action buttons
+    â”‚   â””â”€â”€ common/
+    â”‚       â”œâ”€â”€ CheckoutFooter.vue      # Clean checkout footer
+    â”‚       â”œâ”€â”€ CheckoutHeader.vue      # Minimal header with back link & SSL badge
+    â”‚       â”œâ”€â”€ EcoFooter.vue           # Main application footer
+    â”‚       â””â”€â”€ EcoHeader.vue           # Main application header with cart badge & search
+    â”œâ”€â”€ plugins/
+    â”‚   â””â”€â”€ vuetify.js            # Vuetify instance configuration & custom theme
+    â”œâ”€â”€ router/
+    â”‚   â””â”€â”€ index.js              # Vue Router history setup & route definitions
+    â”œâ”€â”€ stores/
+    â”‚   â”œâ”€â”€ cart.js               # Pinia store for cart items, quantities & totals
+    â”‚   â””â”€â”€ checkout.js           # Pinia store for shipping address & payment info
+    â””â”€â”€ views/
+        â”œâ”€â”€ OrderConfirmationView.vue # Order success page
+        â”œâ”€â”€ PaymentView.vue          # Payment page
+        â”œâ”€â”€ ShippingAddressView.vue  # Shipping address form page
+        â””â”€â”€ ShoppingCartView.vue     # Main cart page
 ```
 
 ---
 
-## 🧠 State Management (Pinia)
+## ðŸ§  State Management (Pinia)
 
 State is managed cleanly across two dedicated Pinia stores:
 
@@ -133,7 +133,7 @@ State is managed cleanly across two dedicated Pinia stores:
 
 ---
 
-## ⚡ Local Setup & Execution
+## âš¡ Local Setup & Execution
 
 ### Prerequisites
 - **Node.js**: v18+ recommended
@@ -170,7 +170,7 @@ State is managed cleanly across two dedicated Pinia stores:
 
 ---
 
-## 🌐 Microfrontend Integration Status
+## ðŸŒ Microfrontend Integration Status
 
 > [!IMPORTANT]
 > **Current Architecture Note**:
@@ -184,9 +184,15 @@ State is managed cleanly across two dedicated Pinia stores:
 
 ---
 
-## ⚠️ Known Limitations & Design Decisions
+## âš ï¸ Known Limitations & Design Decisions
 
 1. **In-Memory Mock Data**: Cart items and checkout form inputs are stored in Pinia memory. Page refresh re-initializes cart state to default sample items.
 2. **Mock Payment**: No real payment processor (Stripe/PayPal) is connected; clicking payment completion simulates instantaneous success.
 3. **Fixed Shipping Fee**: Shipping is set to a flat $5.00 during checkout step.
 4. **No Backend API**: All actions are executed client-side.
+
+## License & copyright
+
+Copyright © 2026 Ali Yaqoub. All rights reserved.
+
+This software and its contents are proprietary. Unauthorized copying, distribution, modification, or commercial use is prohibited without prior written permission from the copyright holder.
