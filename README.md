@@ -41,7 +41,7 @@
 * **Empty Cart State**: Clear feedback screen when the cart is empty, featuring a demo reset button to restore initial sample items.
 * **Order Summary Card**: Displays item count, subtotal, tax calculation (8.5%), shipping estimate, and grand total.
 
-### ðŸ“ 2. Shipping Address (`/checkout/shipping`)
+### 2. Shipping Address (`/checkout/shipping`)
 * **Form Inputs**: Full Name, Phone Number, Street Address, City, Postal Code.
 * **Form Validation**: Vuetify inline validation enforcing required fields prior to proceeding.
 * **State Persistence**: Customer details are persisted in the Pinia checkout store across navigation.
@@ -59,8 +59,7 @@
 
 ---
 
-## ðŸ—ºï¸ Verified Application Routes
-
+## Verified Application Routes
 *(Verified directly against `src/router/index.js`)*
 
 | Route Path | Type / Component | Description |
@@ -170,8 +169,7 @@ State is managed cleanly across two dedicated Pinia stores:
 
 ---
 
-## ðŸŒ Microfrontend Integration Status
-
+## Microfrontend Integration Status
 > [!IMPORTANT]
 > **Current Architecture Note**:
 > This repository is currently implemented as an **independent, standalone Vue 3 Single Page Application (SPA)** with in-memory state management.
