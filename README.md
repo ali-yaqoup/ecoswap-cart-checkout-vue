@@ -1,4 +1,4 @@
-﻿# EcoSwap â€” Shopping Cart & Checkout Microfrontend (Group 11)
+# EcoSwap — Shopping Cart & Checkout Microfrontend (Group 11)
 
 [![Vue 3](https://img.shields.io/badge/Vue-3.5.41-4fc08d?logo=vuedotjs)](https://vuejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.4.21-646cff?logo=vite)](https://vitejs.dev/)
@@ -6,7 +6,7 @@
 [![Pinia](https://img.shields.io/badge/Pinia-2.3.1-ffd859)](https://pinia.vuejs.org/)
 [![Netlify Status](https://img.shields.io/badge/Netlify-Deployed-00ad9f?logo=netlify)](https://ecoswap-cart-checkout-vue.netlify.app/)
 
-## ðŸ“Œ Project Overview
+## 📌 Project Overview
 
 **EcoSwap** is a sustainable second-hand marketplace application. This repository contains the **Cart & Checkout Microfrontend** module (developed by **Group 11**), responsible for managing user shopping cart items, address entry, mocked payment processing, and order confirmation.
 
@@ -15,7 +15,7 @@
 
 ---
 
-## ðŸ› ï¸ Technology Stack & Installed Versions
+## 🛠️ Technology Stack & Installed Versions
 
 *(Verified directly from `node_modules` via `npm list` and `package-lock.json`)*
 
@@ -32,9 +32,9 @@
 
 ---
 
-## âœ¨ Implemented Features
+## ✨ Implemented Features
 
-### ðŸ›’ 1. Shopping Cart (`/cart`)
+### 🛒 1. Shopping Cart (`/cart`)
 * **Item Management**: View item details (title, description, image, unit price).
 * **Quantity Adjustment**: Dynamically increase or decrease item quantities (+/-) with automatic price recalculations.
 * **Item Removal**: Delete items from cart with real-time subtotal and tax updates.
@@ -46,13 +46,13 @@
 * **Form Validation**: Vuetify inline validation enforcing required fields prior to proceeding.
 * **State Persistence**: Customer details are persisted in the Pinia checkout store across navigation.
 
-### ðŸ’³ 3. Payment Processing (`/checkout/payment`)
+### 💳 3. Payment Processing (`/checkout/payment`)
 * **Payment Methods**: Toggle between **Credit Card** and **Cash on Delivery (COD)**.
 * **Credit Card Form**: Full card details entry (Card Number, Name on Card, Expiry Date, CVV).
 * **Order Summary Sidebar**: Dynamic order breakdown including a fixed $5.00 shipping fee.
 * **Mocked Transaction**: Submitting the form simulates order placement without calling real payment gateways.
 
-### ðŸŽ‰ 4. Order Confirmation (`/checkout/confirmation`)
+### 🎉 4. Order Confirmation (`/checkout/confirmation`)
 * **Success Indicator**: Visual confirmation with order completion message.
 * **Order Tracking Details**: Generated order ID (`#ECO-12345`), estimated delivery date, and confirmation email alert.
 * **Cart Reset**: Returning to shop automatically clears the processed cart items.
@@ -74,7 +74,7 @@
 
 ---
 
-## ðŸ“‚ Project & Component Architecture
+## 📂 Project & Component Architecture
 
 ```text
 ecoswap-cart-checkout/
@@ -116,7 +116,7 @@ ecoswap-cart-checkout/
 
 ---
 
-## ðŸ§  State Management (Pinia)
+## 🧠 State Management (Pinia)
 
 State is managed cleanly across two dedicated Pinia stores:
 
@@ -133,7 +133,7 @@ State is managed cleanly across two dedicated Pinia stores:
 
 ---
 
-## âš¡ Local Setup & Execution
+## ⚡ Local Setup & Execution
 
 ### Prerequisites
 - **Node.js**: v18+ recommended
@@ -184,7 +184,7 @@ State is managed cleanly across two dedicated Pinia stores:
 
 ---
 
-## âš ï¸ Known Limitations & Design Decisions
+## ⚠️ Known Limitations & Design Decisions
 
 1. **In-Memory Mock Data**: Cart items and checkout form inputs are stored in Pinia memory. Page refresh re-initializes cart state to default sample items.
 2. **Mock Payment**: No real payment processor (Stripe/PayPal) is connected; clicking payment completion simulates instantaneous success.
@@ -196,3 +196,5 @@ State is managed cleanly across two dedicated Pinia stores:
 Copyright © 2026 Ali Yaqoub. All rights reserved.
 
 This software and its contents are proprietary. Unauthorized copying, distribution, modification, or commercial use is prohibited without prior written permission from the copyright holder.
+
+See the [LICENSE](./LICENSE) file for the full notice.
